@@ -1,0 +1,18 @@
+language: rust
+
+rust:
+  - nightly
+  - beta
+  - stable
+  - 1.38.0
+
+jobs:
+  allow_failures:
+    - rust: nightly
+
+before_script:
+  - rustup component add rustfmt
+
+script:
+  - cargo fmt -- --check
+  - cargo test
