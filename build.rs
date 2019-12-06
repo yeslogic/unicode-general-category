@@ -45,7 +45,7 @@ fn compile_table() -> CompiledTable {
 
     let mut block = Block::new();
     for codepoint in start..=end {
-        let script = lookup(codepoint);
+        let category = lookup(codepoint);
         let block_address = (codepoint >> SHIFT).saturating_sub(1) << SHIFT;
 
         // This is the first codepoint in this block, write out the previous block
@@ -61,7 +61,7 @@ fn compile_table() -> CompiledTable {
             block.reset();
         }
 
-        block[usize::try_from(codepoint).unwrap() & block::LAST_INDEX] = script;
+        block[usize::try_from(codepoint).unwrap() & block::LAST_INDEX] = category;
     }
 
     CompiledTable {
@@ -96,12 +96,12 @@ fn write_table(path: &Path, compiled_table: &CompiledTable) {
 
     for (address, block) in &compiled_table.blocks {
         writeln!(output, "// BLOCK: {:04X}\n", address).unwrap();
-        for (i, script) in block.iter().enumerate() {
+        for (i, category) in block.iter().enumerate() {
             if i != 0 && (i & 0xF) == 0 {
                 writeln!(output).unwrap();
             }
 
-            write!(output, "{:?},", script).unwrap();
+            write!(output, "{:?},", category).unwrap();
         }
 
         write!(output, "\n\n").unwrap();
@@ -121,7 +121,7 @@ fn write_table(path: &Path, compiled_table: &CompiledTable) {
         .unwrap();
     }
 
-    // Write out the array that maps scripts to offsets
+    // Write out the array that maps categories to offsets
     writeln!(
         output,
         "\nconst CATEGORY_BLOCK_OFFSETS: [u16; {}] = [",
