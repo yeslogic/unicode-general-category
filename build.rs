@@ -53,7 +53,7 @@ fn compile_table() -> CompiledTable {
             if let Some(index) = blocks.iter().position(|(_, candidate)| candidate == &block) {
                 address_to_block_index.push((block_address, index));
             } else {
-                // Add the block of it's new
+                // Add the block if it's new
                 address_to_block_index.push((block_address, blocks.len()));
                 blocks.push((block_address, block.clone()));
             }
