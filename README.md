@@ -49,7 +49,7 @@ it is just indexing into two arrays.
 
 The two level approach maps a code point to a block, then to a position within
 a block. The allows the second level of block to be duplicated, saving space.
-The code is parameterised over the block size, which must be a power of 1. The
+The code is parameterised over the block size, which must be a power of 2. The
 value in the build script is optimal for the data set.
 
 This approach trades off some space for faster lookups. The tables take up
