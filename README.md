@@ -17,7 +17,8 @@ unicode-general-category
 
 <br>
 
-Fast lookup of the Unicode General Category property for `char` in Rust.
+Fast lookup of the Unicode General Category property for `char` in Rust using
+Unicode 12.1 data.
 
 Usage
 -----
@@ -39,11 +40,23 @@ fn main() {
 }
 ```
 
-Implementation Notes
---------------------
+Performance & Implementation Notes
+----------------------------------
 
 [ucd-generate] is used to generate `tables.rs`. A build script (`build.rs`)
-compiles this into a two level look up table. The look up time is constant as it
-is just indexing into two arrays.
+compiles this into a two level look up table. The look up time is constant as
+it is just indexing into two arrays.
+
+The two level approach maps a code point to a block, then to a position within
+a block. The allows the second level of block to be duplicated, saving space.
+The code is parameterised over the block size, which must be a power of 1. The
+value in the build script is optimal for the data set.
+
+This approach trades off some space for faster lookups. The tables take up
+about 45KiB. Benchmarks showed this approach to be ~5–10× faster than the
+typical binary search approach.
+
+It's possible there are further optimisations that could be made to eliminate
+some runs of repeated values in the first level array.
 
 [ucd-generate]: https://github.com/BurntSushi/ucd-generate
