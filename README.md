@@ -27,7 +27,7 @@ Usage
 
 ```toml
 [dependencies]
-unicode-general-category = "0.1.0"
+unicode-general-category = "0.2.0"
 ```
 
 `main.rs`:
