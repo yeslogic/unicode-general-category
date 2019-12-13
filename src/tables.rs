@@ -38,6 +38,7 @@ pub enum GeneralCategory {
     UppercaseLetter,
 }
 
+#[allow(dead_code)]
 pub const GENERAL_CATEGORY: &'static [(u32, u32, GeneralCategory)] = &[
     (0, 31, GeneralCategory::Control),
     (32, 32, GeneralCategory::SpaceSeparator),

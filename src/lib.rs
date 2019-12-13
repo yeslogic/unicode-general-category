@@ -8,8 +8,8 @@
 //! assert_eq!(get_general_category('A'), GeneralCategory::UppercaseLetter);
 //! ```
 
-pub mod category;
-pub mod tables;
+mod category;
+mod tables;
 pub use category::get_general_category;
 pub use tables::GeneralCategory;
 
