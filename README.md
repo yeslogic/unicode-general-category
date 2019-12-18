@@ -48,7 +48,7 @@ compiles this into a two level look up table. The look up time is constant as
 it is just indexing into two arrays.
 
 The two level approach maps a code point to a block, then to a position within
-a block. The allows the second level of block to be duplicated, saving space.
+a block. The allows the second level of block to be deduplicated, saving space.
 The code is parameterised over the block size, which must be a power of 2. The
 value in the build script is optimal for the data set.
 
