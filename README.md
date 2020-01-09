@@ -10,6 +10,7 @@ unicode-general-category
   <a href="https://crates.io/crates/unicode-general-category">
     <img src="https://img.shields.io/crates/v/unicode-general-category.svg" alt="Version">
   </a>
+  <img src="https://img.shields.io/badge/unicode-12.1-informational" alt="Unicode Version">
   <a href="https://github.com/yeslogic/unicode-general-category/blob/master/LICENSE">
     <img src="https://img.shields.io/crates/l/unicode-general-category.svg" alt="License">
   </a>
