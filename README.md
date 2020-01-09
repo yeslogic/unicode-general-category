@@ -59,4 +59,4 @@ typical binary search approach.
 It's possible there are further optimisations that could be made to eliminate
 some runs of repeated values in the first level array.
 
-[ucd-generate]: https://github.com/BurntSushi/ucd-generate
+[ucd-generate]: https://github.com/yeslogic/ucd-generate
