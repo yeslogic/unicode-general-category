@@ -10,7 +10,7 @@ unicode-general-category
   <a href="https://crates.io/crates/unicode-general-category">
     <img src="https://img.shields.io/crates/v/unicode-general-category.svg" alt="Version">
   </a>
-  <img src="https://img.shields.io/badge/unicode-12.1-informational" alt="Unicode Version">
+  <img src="https://img.shields.io/badge/unicode-13.0-informational" alt="Unicode Version">
   <a href="https://github.com/yeslogic/unicode-general-category/blob/master/LICENSE">
     <img src="https://img.shields.io/crates/l/unicode-general-category.svg" alt="License">
   </a>
@@ -19,19 +19,10 @@ unicode-general-category
 <br>
 
 Fast lookup of the Unicode General Category property for `char` in Rust using
-Unicode 12.1 data.
+Unicode 13.0 data.
 
 Usage
 -----
-
-`Cargo.toml`:
-
-```toml
-[dependencies]
-unicode-general-category = "0.2.0"
-```
-
-`main.rs`:
 
 ```rust
 use unicode_general_category::{get_general_category, GeneralCategory};

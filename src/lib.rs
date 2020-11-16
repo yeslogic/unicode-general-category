@@ -15,7 +15,7 @@ pub use tables::GeneralCategory;
 
 /// The version of [Unicode](http://www.unicode.org/)
 /// that this version of unicode-general-category was generated from.
-pub const UNICODE_VERSION: (u64, u64, u64) = (12, 1, 0);
+pub const UNICODE_VERSION: (u64, u64, u64) = (13, 0, 0);
 
 #[cfg(test)]
 mod test {
