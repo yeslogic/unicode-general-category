@@ -8,6 +8,8 @@
 //! assert_eq!(get_general_category('A'), GeneralCategory::UppercaseLetter);
 //! ```
 
+#![no_std]
+
 mod category;
 mod tables;
 pub use category::get_general_category;
