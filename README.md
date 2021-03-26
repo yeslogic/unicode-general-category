@@ -19,7 +19,7 @@ unicode-general-category
 <br>
 
 Fast lookup of the Unicode General Category property for `char` in Rust using
-Unicode 13.0 data.
+Unicode 13.0 data. This crate is no-std compatible.
 
 Usage
 -----
