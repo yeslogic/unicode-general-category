@@ -1,6 +1,6 @@
 [package]
 name = "unicode-general-category"
-version = "0.4.0"
+version = "0.5.0"
 authors = ["YesLogic Pty. Ltd. <info@yeslogic.com>"]
 edition = "2018"
 
@@ -14,8 +14,5 @@ license = "Apache-2.0"
 description = "Fast lookup of the Unicode General Category property for char"
 keywords = ["unicode", "general", "category", "no-std"]
 categories = ["text-processing"]
-
-[badges]
-travis-ci = { repository = "yeslogic/unicode-general-category" }
 
 [dependencies]
