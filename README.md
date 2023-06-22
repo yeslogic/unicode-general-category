@@ -2,8 +2,8 @@ unicode-general-category
 ========================
 
 <div align="center">
-  <a href="https://travis-ci.com/yeslogic/unicode-general-category">
-    <img src="https://travis-ci.com/yeslogic/unicode-general-category.svg?branch=master" alt="Build Status"></a>
+  <a href="https://github.com/yeslogic/unicode-general-category/actions/workflows/ci.yml">
+    <img src="https://github.com/yeslogic/unicode-general-category/actions/workflows/ci.yml/badge.svg" alt="Build Status"></a>
   <a href="https://docs.rs/unicode-general-category">
     <img src="https://docs.rs/unicode-general-category/badge.svg" alt="Documentation">
   </a>
