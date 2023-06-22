@@ -15,7 +15,4 @@ description = "Fast lookup of the Unicode General Category property for char"
 keywords = ["unicode", "general", "category", "no-std"]
 categories = ["text-processing"]
 
-[badges]
-travis-ci = { repository = "yeslogic/unicode-general-category" }
-
 [dependencies]
