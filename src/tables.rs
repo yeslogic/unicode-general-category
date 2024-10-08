@@ -6,6 +6,7 @@
 //
 // yeslogic-ucd-generate 0.7.0 is available on crates.io.
 
+#[non_exhaustive]
 #[derive(Clone, Copy, Debug, Hash, Eq, PartialEq)]
 pub enum GeneralCategory {
     ClosePunctuation,
