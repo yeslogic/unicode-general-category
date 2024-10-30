@@ -1,6 +1,6 @@
 [package]
 name = "unicode-general-category"
-version = "1.0.0-pre"
+version = "1.0.0"
 authors = ["YesLogic Pty. Ltd. <info@yeslogic.com>"]
 edition = "2018"
 
