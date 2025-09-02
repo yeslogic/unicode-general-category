@@ -16,9 +16,8 @@ pub fn get_general_category(chr: char) -> GeneralCategory {
     let u = chr as u32;
 
     if u <= LAST_CODEPOINT {
-        return CATEGORY_BLOCKS
-            [CATEGORY_BLOCK_OFFSETS[u as usize >> SHIFT] as usize + (u as usize & MASK)];
+        CATEGORY_BLOCKS[CATEGORY_BLOCK_OFFSETS[u as usize >> SHIFT] as usize + (u as usize & MASK)]
     } else {
-        return PrivateUse;
+        PrivateUse
     }
 }

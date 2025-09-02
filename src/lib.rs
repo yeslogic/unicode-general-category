@@ -19,6 +19,46 @@ pub use tables::GeneralCategory;
 /// that this version of unicode-general-category was generated from.
 pub const UNICODE_VERSION: (u64, u64, u64) = (16, 0, 0);
 
+impl GeneralCategory {
+    /// Returns the general category abbreviation.
+    /// See [Unicode General Category Values](https://www.unicode.org/reports/tr44/tr44-30.html#General_Category_Values)
+    /// for the list of all general categories.
+    pub fn abbreviation(&self) -> &'static str {
+        match self {
+            GeneralCategory::ClosePunctuation => "Pe",
+            GeneralCategory::ConnectorPunctuation => "Pc",
+            GeneralCategory::Control => "Cc",
+            GeneralCategory::CurrencySymbol => "Sc",
+            GeneralCategory::DashPunctuation => "Pd",
+            GeneralCategory::DecimalNumber => "Nd",
+            GeneralCategory::EnclosingMark => "Me",
+            GeneralCategory::FinalPunctuation => "Pf",
+            GeneralCategory::Format => "Cf",
+            GeneralCategory::InitialPunctuation => "Pi",
+            GeneralCategory::LetterNumber => "Nl",
+            GeneralCategory::LineSeparator => "Zl",
+            GeneralCategory::LowercaseLetter => "Ll",
+            GeneralCategory::MathSymbol => "Sm",
+            GeneralCategory::ModifierLetter => "Lm",
+            GeneralCategory::ModifierSymbol => "Sk",
+            GeneralCategory::NonspacingMark => "Mn",
+            GeneralCategory::OpenPunctuation => "Ps",
+            GeneralCategory::OtherLetter => "Lo",
+            GeneralCategory::OtherNumber => "No",
+            GeneralCategory::OtherPunctuation => "Po",
+            GeneralCategory::OtherSymbol => "So",
+            GeneralCategory::ParagraphSeparator => "Zp",
+            GeneralCategory::PrivateUse => "Co",
+            GeneralCategory::SpaceSeparator => "Zs",
+            GeneralCategory::SpacingMark => "Mc",
+            GeneralCategory::Surrogate => "Cs",
+            GeneralCategory::TitlecaseLetter => "Lt",
+            GeneralCategory::Unassigned => "Cn",
+            GeneralCategory::UppercaseLetter => "Lu",
+        }
+    }
+}
+
 #[cfg(test)]
 mod test {
     use super::{get_general_category, GeneralCategory};
