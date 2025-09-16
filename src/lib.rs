@@ -70,4 +70,10 @@ mod test {
         assert_eq!(get_general_category('カ'), GeneralCategory::OtherLetter);
         assert_eq!(get_general_category('🦳'), GeneralCategory::OtherSymbol);
     }
+
+    #[test]
+    fn test_abbreviation() {
+        let cat = get_general_category('a');
+        assert_eq!(cat.abbreviation(), "Ll");
+    }
 }
